@@ -1,0 +1,17 @@
+redis:
+  image: redis:7-alpine
+
+postgres:
+  image: postgres:15-alpine
+  db: tasksdb
+  user: postgres
+  password: postgres
+
+api:
+  image: shashikarandev/taskflow-api:latest
+
+worker:
+  image: shashikarandev/taskflow-worker:latest
+
+frontend:
+  image: shashikarandev/taskflow-frontend:latest
