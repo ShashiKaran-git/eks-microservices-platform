@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # 🚀 EKS Microservices Platform
 
 A cloud-native microservices platform built using **Python, Flask, Docker, Redis, and PostgreSQL**.  
@@ -118,3 +119,5 @@ The goal of this project is to gain hands-on experience with:
 ## 👨‍💻 Author
 
 Built as part of a cloud-native & DevOps learning journey.
+=======
+>>>>>>> 920fa48 (feat: deploy microservices platform with kubernetes and helm)
