@@ -1,124 +1,179 @@
 # 🚀 EKS Microservices Platform
 
-A cloud-native microservices platform built using **Python, Flask, Docker, Redis, and PostgreSQL**.  
-This project demonstrates how modern distributed systems process tasks asynchronously using message queues and background workers.
+A production-style cloud-native microservices platform built using Docker, Kubernetes, Helm, Terraform, AWS EKS, GitHub Actions, Redis, and PostgreSQL.
+
+This project demonstrates modern DevOps workflows including:
+- containerization
+- Kubernetes orchestration
+- Infrastructure as Code (IaC)
+- CI/CD automation
+- autoscaling
+- cloud-native deployments
+
+---
+
+# 🏗 Architecture
+
+```text
+GitHub Actions
+        ↓
+Docker Hub
+        ↓
+AWS EKS
+        ↓
+Frontend Service
+        ↓
+API Service
+        ↓
+Redis Queue
+        ↓
+Worker Service
+        ↓
+PostgreSQL
+```
 
 ---
 
 # ✨ Features
 
-- ⚡ Microservices-based architecture
+- ⚡ Microservices architecture
 - 🐳 Dockerized services
-- 🔄 Asynchronous task processing
-- 📬 Redis-based task queue
+- ☸ Kubernetes orchestration
+- 📦 Helm templating
+- 🏗 Terraform infrastructure provisioning
+- ☁ AWS EKS deployment
+- 🔄 GitHub Actions CI/CD pipeline
+- 📬 Redis-based async task queue
 - 🗄 PostgreSQL persistence layer
-- 🌐 Frontend + API communication
-- 👷 Background worker processing
-- ☁️ Kubernetes & EKS ready structure
+- 📈 Horizontal Pod Autoscaling (HPA)
+- 📊 Kubernetes metrics monitoring
+- 🌐 Public LoadBalancer deployment
 
 ---
 
-## Architecture
-User → Frontend Service → API Service → Redis Queue → Worker Service → PostgreSQL
+# 🧩 Services Overview
 
----
-
-## 🧩 Services
-
-| Service | Role |
+| Service | Purpose |
 |---|---|
-| **🎨 Frontend** | Handles user interaction and displays task status/results |
-| **🚀 API** | Receives tasks, persists them to PostgreSQL, and enqueues them in Redis |
-| **👷 Worker** | Consumes and processes tasks asynchronously from the Redis queue |
-| **📬 Redis** | Lightweight message broker and task queue |
-| **🗄 PostgreSQL** | Stores task history, status, and results |
+| Frontend | User interface |
+| API Service | Backend REST API |
+| Worker | Background task processor |
+| Redis | Queue/message broker |
+| PostgreSQL | Persistent database |
 
 ---
 
-## 🐳 Dockerized Microservices
+# 🔄 Async Processing Workflow
 
-Each service is independently containerized using Docker for:
-
-- portability
-- scalability
-- environment consistency
-- cloud-native deployments
-
----
-
-## 🔄 Async Workflow
-
-1. User submits a task
-2. API stores the task in PostgreSQL
-3. API pushes the task into the Redis queue
-4. Worker consumes the task asynchronously
-5. Worker processes the task and updates the database
-6. Frontend displays the latest status and result
+1. User submits task
+2. API stores task in PostgreSQL
+3. API pushes task into Redis queue
+4. Worker consumes task asynchronously
+5. Worker processes task
+6. Database updates status/result
+7. Frontend displays latest result
 
 ---
 
-## 🛠 Tech Stack
+# ⚙ Tech Stack
 
-- **Backend:** Python, Flask
-- **Containerization:** Docker, Docker Compose
-- **Queue:** Redis
-- **Database:** PostgreSQL
-- **Upcoming:** Kubernetes, Helm, AWS EKS, Terraform
+- Python
+- Flask
+- Docker
+- Kubernetes
+- Helm
+- Terraform
+- AWS EKS
+- GitHub Actions
+- Redis
+- PostgreSQL
 
 ---
 
-## 📦 Local Development
+# 🚀 CI/CD Workflow
 
-```bash
-docker compose up --build
+```text
+git push
+    ↓
+GitHub Actions
+    ↓
+Docker image build
+    ↓
+Push to Docker Hub
+    ↓
+Connect to AWS EKS
+    ↓
+Helm deployment
+    ↓
+Automatic Kubernetes rollout
 ```
 
-| Service | URL |
-|---|---|
-| Frontend | http://localhost:3000 |
-| API | http://localhost:8000 |
+---
+
+# 📈 Horizontal Pod Autoscaling
+
+Implemented Kubernetes HPA using Metrics Server.
+
+The API service automatically scales based on CPU utilization.
+
+Example:
+- CPU load increased beyond threshold
+- Kubernetes scaled API replicas from 1 → 3 automatically
 
 ---
 
-📚 Key Concepts Learned
-- Microservices architecture
-- Service-to-service communication
-- Container networking
-- Docker Compose orchestration
-- Async background processing
-- Redis queue patterns
-- Database persistence
-- Distributed systems basics
+# 📸 Screenshots
+
+## Application Running on AWS EKS
+
+![Application UI](screenshots/app-ui.png)
 
 ---
 
-## 🚧 Upcoming Improvements
+## GitHub Actions CI/CD Pipeline
 
-- [ ] Kubernetes manifests
-- [ ] Helm chart packaging
-- [ ] AWS EKS deployment
-- [ ] Terraform infrastructure
-- [ ] CI/CD pipeline
-- [ ] Monitoring & logging
-- [ ] Horizontal scaling
+![GitHub Actions](screenshots/github-actions.png)
 
 ---
 
-## 🎯 Project Goal
+## Kubernetes Horizontal Pod Autoscaling
 
-The goal of this project is to gain hands-on experience with:
-
-- cloud-native application design
-- container orchestration
-- scalable backend systems
-- modern DevOps workflows
+![HPA](screenshots/hpa-autoscaling.png)
 
 ---
 
-Updated CI/CD deployment pipeline
+## AWS EKS Cluster
+
+![EKS Cluster](screenshots/eks-cluster.png)
 
 ---
 
-## 👨‍💻 Author
+# 🧠 Challenges Faced & Lessons Learned
 
-Built as part of a cloud-native & DevOps learning journey.
+- Managed resource constraints on t3.small infrastructure
+- Solved Kubernetes networking and service discovery issues
+- Handled Helm ownership conflicts
+- Debugged Git rebase and merge conflicts
+- Optimized monitoring stack for low-resource clusters
+- Resolved Terraform dependency cleanup issues
+- Implemented autoscaling under generated load
+
+---
+
+# 🎯 Key Learnings
+
+- Kubernetes orchestration
+- Infrastructure as Code (Terraform)
+- Helm templating
+- GitHub Actions CI/CD
+- AWS EKS deployments
+- Horizontal Pod Autoscaling
+- Distributed systems architecture
+- Cloud-native networking
+- Infrastructure optimization
+
+---
+
+# 👨‍💻 Author
+
+Built as part of a cloud-native & DevOps engineering learning journey.
