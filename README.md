@@ -90,7 +90,126 @@ PostgreSQL
 
 ---
 
+# 📦 Local Development Setup
+
+## Clone Repository
+
+```bash
+git clone https://github.com/ShashiKaran-git/eks-microservices-platform.git
+
+cd eks-microservices-platform
+```
+
+---
+
+## Run with Docker Compose
+
+```bash
+docker compose up --build
+```
+
+---
+
+## Access Application
+
+Frontend:
+```text
+http://localhost:3000
+```
+
+API:
+```text
+http://localhost:8000
+```
+
+---
+
+# ☸ Kubernetes Deployment
+
+## Apply Kubernetes Resources
+
+```bash
+kubectl apply -f k8s/
+```
+
+---
+
+## Verify Pods
+
+```bash
+kubectl get pods
+```
+
+---
+
+## Verify Services
+
+```bash
+kubectl get svc
+```
+---
+
+# 📊 Monitoring & Observability
+
+Implemented Kubernetes Metrics Server for:
+- CPU monitoring
+- memory monitoring
+- resource visibility
+
+Explored Prometheus + Grafana integration using Helm.
+
+Due to infrastructure limitations on a single t3.small node, the full kube-prometheus-stack introduced resource pressure and pending pods.
+
+To optimize cluster stability and cost efficiency:
+- retained Metrics Server for lightweight observability
+- used `kubectl top nodes` and `kubectl top pods`
+- evaluated monitoring tradeoffs for small Kubernetes clusters
+
+This reflects real-world infrastructure optimization decisions in resource-constrained environments.
+
+---
+
+# 🏗 Terraform Infrastructure Provisioning
+
+## Initialize Terraform
+
+```bash
+terraform init
+```
+
+---
+
+## Preview Infrastructure
+
+```bash
+terraform plan
+```
+
+---
+
+## Create AWS Infrastructure
+
+```bash
+terraform apply
+```
+
+---
+
 # 🚀 CI/CD Workflow
+
+# 🔄 GitHub Actions CI/CD
+
+Pipeline automatically:
+- builds Docker images
+- pushes images to Docker Hub
+- connects to AWS EKS
+- deploys application using Helm
+
+Triggered automatically on:
+
+```text
+git push
+```
 
 ```text
 git push
