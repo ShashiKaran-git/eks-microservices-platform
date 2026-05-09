@@ -115,6 +115,10 @@ The goal of this project is to gain hands-on experience with:
 
 ---
 
+Updated CI/CD deployment pipeline
+
+---
+
 ## 👨‍💻 Author
 
 Built as part of a cloud-native & DevOps learning journey.
