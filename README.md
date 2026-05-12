@@ -96,7 +96,6 @@ PostgreSQL
 
 ```bash
 git clone https://github.com/ShashiKaran-git/eks-microservices-platform.git
-
 cd eks-microservices-platform
 ```
 
