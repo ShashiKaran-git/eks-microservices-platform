@@ -115,7 +115,6 @@ Frontend:
 ```text
 http://localhost:3000
 ```
-
 API:
 ```text
 http://localhost:8000
