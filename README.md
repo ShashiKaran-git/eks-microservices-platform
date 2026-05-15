@@ -42,7 +42,7 @@ PostgreSQL
 - 📦 Helm templating
 - 🏗 Terraform infrastructure provisioning
 - ☁ AWS EKS deployment
-- 🔄 GitHub Actions CI/CD pipeline
+- 🔄 GitHub Actions CICD pipeline
 - 📬 Redis-based async task queue
 - 🗄 PostgreSQL persistence layer
 - 📈 Horizontal Pod Autoscaling (HPA)
