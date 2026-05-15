@@ -1,6 +1,6 @@
-# 🚀 EKS Microservices Platform
+# 🚀 EKS Microservices Platform (TaskFlow Platform)
 
-A production-style cloud-native microservices platform built using Docker, Kubernetes, Helm, Terraform, AWS EKS, GitHub Actions, Redis, and PostgreSQL.
+A production style cloud-native microservices platform built using Docker, Kubernetes, Helm, Terraform, AWS EKS, GitHub Actions CICD, Redis, and PostgreSQL.
 
 This project demonstrates modern DevOps workflows including:
 - containerization
