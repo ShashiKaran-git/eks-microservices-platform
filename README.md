@@ -193,7 +193,7 @@ terraform apply
 
 ---
 
-# 🚀 CI/CD Workflow
+# 🚀 CICD Workflow
 
 # 🔄 GitHub Actions CI/CD
 
