@@ -45,7 +45,7 @@ PostgreSQL
 - 🔄 GitHub Actions CICD pipeline
 - 📬 Redis-based async task queue
 - 🗄 PostgreSQL persistence layer
-- 📈 Horizontal Pod Autoscaling (HPA)
+- 📈 Horizontal pod Autoscaling (HPA)
 - 📊 Kubernetes metrics monitoring
 - 🌐 Public LoadBalancer deployment
 
@@ -169,7 +169,7 @@ This reflects real-world infrastructure optimization decisions in resource-const
 
 # 🏗 Terraform Infrastructure Provisioning
 
-## Initialize Terraform
+## Initialize terraform
 
 ```bash
 terraform init
