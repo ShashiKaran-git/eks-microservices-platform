@@ -90,7 +90,7 @@ PostgreSQL
 
 ---
 
-# 📦 Local Development Setup
+# 📦 Local development Setup
 
 ## Clone Repository
 
@@ -109,7 +109,7 @@ docker compose up --build
 
 ---
 
-## Access Application
+## Access application
 
 Frontend:
 ```text
@@ -147,7 +147,7 @@ kubectl get svc
 ```
 ---
 
-# 📊 Monitoring & Observability
+# 📊 Monitoring & observability
 
 Implemented Kubernetes Metrics Server for:
 - CPU monitoring
