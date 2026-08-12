@@ -21,13 +21,13 @@ Docker Hub
         ↓
 AWS EKS
         ↓
-Frontend Service
+Frontend service
         ↓
 API Service
         ↓
 Redis Queue
         ↓
-Worker Service
+Worker service
         ↓
 PostgreSQL
 ```
@@ -43,7 +43,7 @@ PostgreSQL
 - 🏗 Terraform infrastructure provisioning
 - ☁ AWS EKS deployment
 - 🔄 GitHub Actions CICD pipeline
-- 📬 Redis-based async task queue
+- 📬 Redis based async task queue
 - 🗄 PostgreSQL persistence layer
 - 📈 Horizontal pod Autoscaling (HPA)
 - 📊 Kubernetes metrics monitoring
