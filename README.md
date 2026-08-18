@@ -2,7 +2,7 @@
 
 A production style cloud-native microservices platform built using Docker, Kubernetes, Helm, Terraform, AWS EKS, GitHub Actions CICD, Redis, and PostgreSQL.
 
-This project demonstrates modern DevOps workflows including:
+This project demonstrates modern devops workflows including:
 - containerization
 - Kubernetes orchestration
 - Infrastructure as Code (IaC)
@@ -149,7 +149,7 @@ kubectl get svc
 
 # 📊 Monitoring & observability
 
-Implemented Kubernetes Metrics Server for:
+Implemented Kubernetes metrics Server for:
 - CPU monitoring
 - memory monitoring
 - resource visibility
